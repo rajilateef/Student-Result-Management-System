@@ -24,10 +24,14 @@ import FacultyPassword from "./components/faculty/profile/update/password/Passwo
 import FacultyUpdate from "./components/faculty/profile/update/Update";
 import UploadMarks from "./components/faculty/uploadMarks/UploadMarks";
 import AdminLogin from "./components/login/adminLogin/AdminLogin";
+import AdminRegister from "./components/register/adminRegister/AdminRegister";
 import FacultyLogin from "./components/login/facultyLogin/FacultyLogin";
+import FacultyRegister from "./components/register/facultyRegister/FacultyRegister";
 import Login from "./components/login/Login";
+import Register from "./components/register/Register";
 
 import StudentLogin from "./components/login/studentLogin/StudentLogin";
+import StudentRegister from "./components/register/studentRegister/StudentRegister";
 import StudentFirstTimePassword from "./components/student/profile/update/firstTimePassword/FirstTimePassword";
 import StudentHome from "./components/student/StudentHome";
 import StudentProfile from "./components/student/profile/Profile";
@@ -47,10 +51,12 @@ const App = () => {
   return (
     <Routes>
       <Route exact path="/" element={<Login />} />
+      <Route exact path="/register" element={<Register />} />
 
       {/* Admin  */}
 
       <Route path="/login/adminlogin" element={<AdminLogin />} />
+      <Route path="/register/admin-register" element={<AdminRegister />} />
       <Route path="/admin/home" element={<AdminHome />} />
       <Route path="/admin/profile" element={<AdminProfile />} />
       <Route path="/admin/update" element={<AdminUpdate />} />
@@ -77,6 +83,7 @@ const App = () => {
       {/* Faculty  */}
 
       <Route path="/login/facultylogin" element={<FacultyLogin />} />
+      <Route path="/register/faculty-register" element={<FacultyRegister />} />
       <Route path="/faculty/home" element={<FacultyHome />} />
       <Route path="/faculty/password" element={<FacultyFirstTimePassword />} />
       <Route path="/faculty/profile" element={<FacultyProfile />} />
@@ -89,6 +96,7 @@ const App = () => {
       {/* Student  */}
 
       <Route path="/login/studentlogin" element={<StudentLogin />} />
+      <Route path="/register/student-register" element={<StudentRegister />} />
       <Route path="/student/home" element={<StudentHome />} />
       <Route path="/student/password" element={<StudentFirstTimePassword />} />
       <Route path="/student/profile" element={<StudentProfile />} />
